@@ -1,12 +1,13 @@
 from mpython import *
 import time
 
-from globle import GlobleController
-from common.touch_input import TouchInputController
+from os.globle import GlobleController
 
-oled.DispChar(time.localtime()[0], 0, 0, 1)
-
-oled.DispChar("wifi未连接", 2*16, 3*16, 1)
-oled.show()
-
+def step():
+    oled.fill(0)
+    oled.DispChar(str(time.localtime()[0]), 0, 0, 1)
+    oled.DispChar("wifi断开", 0*16, 3*16, 1)
+    oled.DispChar("按A连接wifi", 4*16, 3*16, 1)
+    oled.show()
+    pass
 
